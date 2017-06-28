@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="2">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n<external location\="D\:\\Program Files\\Mozilla Firefox\\firefox.exe" name\="firefox"/>\r\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:8080/loginAndReg/register.jsp|*|http\://localhost\:8080/loginAndReg/register|*|http\://localhost\:8080/loginAndReg/login.jsp|*|http\://localhost\:8080/loginAndReg/login|*|http\://localhost\:8080/test/MyJsp.jsp|*|http\://localhost\:8080/login/MyJsp.jsp|*|http\://localhost\:8080/login/|*|http\://localhost\:8080/login/error.jsp|*|http\://localhost\:8080/login/inedx.jsp|*|http\://localhost\:8080/login/register.jsp|*|http\://localhost\:8080/test/|*|
