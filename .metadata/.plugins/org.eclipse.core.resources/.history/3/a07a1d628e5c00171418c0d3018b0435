@@ -1,0 +1,10 @@
+package model;
+
+import java.util.Date;
+
+public class Schedule {
+	private int scheduleID;
+	private String scheduleText;
+	private Date scheduleDate;
+	private User User;
+}

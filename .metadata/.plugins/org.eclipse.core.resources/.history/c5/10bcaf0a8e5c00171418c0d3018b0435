@@ -1,0 +1,9 @@
+package model;
+
+public class Message {
+	private int messageID;
+	private String messageText;
+	private sendUser senduser;
+	private receiveUser receiveuser;
+	sendTime DATETIME,
+}
