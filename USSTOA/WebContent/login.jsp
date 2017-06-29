@@ -7,9 +7,13 @@
 <title>登录</title>
 </head>
 <body>
-	工号：
-	<input type="text" name="id" />
-	<br> 密码：
-	<input type="password" name="password" />
+<div align="center">
+<form action="login" method="post">
+	工号：<input type="text" name="id" required/><br/> 
+	密码：<input type="password" name="password" required/><br/> 
+	<input type="submit" value="提交">
+	<input type="reset"><br />
+</form>
+</div>
 </body>
 </html>

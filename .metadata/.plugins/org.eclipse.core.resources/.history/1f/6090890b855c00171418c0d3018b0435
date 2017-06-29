@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadbale="true">
+	<Resource name="jdbc/ds" type="javax.sql.DataSource"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:3306/usstoa?useUnicode=true&amp;characterEncoding=utf-8"
+		username="root" password="root" maxActive="10" maxIdle="10" maxWait="-1" />
+	<Resource name="jdbc/mysql" auth="Container" type="javax.sql.DataSource" /
+		资源类型 driverClassName="org.gjt.mm.mysql.Driver" url="jdbc:mysql://localhost/数据库名"
+		username="用户名" password="密码" maxActive="100" / 最大连结数 maxIdle="30" /
+		最大空闲时间 ， 为无限制 maxWait="10000" />
+	//建立连接的的最大等待时间
+</Context> 

@@ -1,0 +1,15 @@
+package dao;
+
+import java.sql.Connection;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Connection connection=GetConnection.getConnection();
+		if(connection==null){
+			System.out.println("连接失败");
+		}else if(connection!=null){
+			System.out.println("连接成功");
+		}
+	}
+}

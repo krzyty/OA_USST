@@ -1,4 +1,16 @@
 eclipse.preferences.version=1
+tomcat7Server.USSTOA.IEARProjectName=
+tomcat7Server.USSTOA.altContextRoot=
+tomcat7Server.USSTOA.contextRoot=/USSTOA
+tomcat7Server.USSTOA.deployIsOverProject=false
+tomcat7Server.USSTOA.deploymentPath=E\:\\tomcat7\\webapps\\USSTOA
+tomcat7Server.USSTOA.isDeployed=true
+tomcat7Server.USSTOA.isExploded=true
+tomcat7Server.USSTOA.isUptoDate=true
+tomcat7Server.USSTOA.noFileCopy=false
+tomcat7Server.USSTOA.shouldBackup=false
+tomcat7Server.USSTOA.shouldOverwrite=false
+tomcat7Server.USSTOA.type=WebDeployment
 tomcat7Server.bookstore.IEARProjectName=
 tomcat7Server.bookstore.altContextRoot=/bookstore
 tomcat7Server.bookstore.contextRoot=/bookstore
