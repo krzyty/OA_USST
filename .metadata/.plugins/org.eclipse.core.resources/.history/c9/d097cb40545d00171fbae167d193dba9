@@ -1,0 +1,12 @@
+package dao;
+
+import javax.activation.DataSource;
+
+public class BaseDao {
+	DataSource dataSource;
+
+	public BaseDao() {
+		dataSource = (DataSource) context.lookup("java:comp/env/jdbc/ds");
+		connection = GetConnection.getConnection();
+	}
+}

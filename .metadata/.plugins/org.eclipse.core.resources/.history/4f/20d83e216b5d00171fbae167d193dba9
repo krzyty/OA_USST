@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+#header {
+	height: 100px;
+	width: 100%;
+	margin: 3px;
+	background-image: url(../image/header2.jpg);
+}
+
+#navigation {
+	height: 50px;
+	width: 100%;
+	border: 1px solid #000;
+	margin: 3px;
+}
+
+#page {
+	width: 100%;
+	margin: 3px;
+}
+
+#pageleft {
+	width: 18%;
+	float: left;
+}
+
+#pageright {
+	margin-left: 350px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	height: 800px;
+}
+
+#footer {
+	background: #d5dffb;
+	clear: both;
+	margin: 3px;
+}

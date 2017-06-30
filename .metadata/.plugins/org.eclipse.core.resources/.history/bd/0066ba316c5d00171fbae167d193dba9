@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+#navigation {
+	height: 50px;
+	width: 100%;
+	border: 1px solid #000;
+	margin: 3px;
+}
+
+#page {
+	height: 100%; width : 100%;
+	margin: 3px;
+	width: 100%;
+}
+
+#pageleft {
+	width: 18%;
+	float: left;
+}
+
+#pageright {
+	margin-left: 350px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	height: 800px;
+}

@@ -8,11 +8,14 @@
 </head>
 <body>
 <div align="center">
-<form action="test" method="post">
+<form action="Login" method="post">
 	工号：<input type="text" name="id" required/><br/> 
-	密码：<input type="password" name="password" required/><br/> 
+	密码：<input type="password" name="password" required/><br/>
+	<input type="radio" name="role" value="user" checked>用户&nbsp;&nbsp;
+	<input type="radio" name="role" value="admin">管理员&nbsp;&nbsp;<br/> 
 	<input type="submit" value="提交">
 	<input type="reset"><br />
+	${requestScope.message}
 </form>
 </div>
 </body>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="84" version="2.0">
+<workbench progressCount="88" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="75" y="75">
 <fastViewData fastViewLocation="1024">
@@ -28,7 +28,7 @@
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -38,7 +38,7 @@
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -47,15 +47,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="login.jsp" partName="login.jsp" path="E:/Workspaces/OA_USST/USSTOA/WebContent/login.jsp" title="login.jsp" tooltip="USSTOA/WebContent/login.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/USSTOA/WebContent/login.jsp"/>
-</editor>
 </editors>
 <views>
 <view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser"/>
@@ -72,8 +67,6 @@
 </view>
 <view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
-<expanded>&#x0A;<category IMemento.internal.id="JavaScript Problems (100 of 200 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.allSeverityField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.allSeverityField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -278,7 +271,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0"/>
 </view>
 </views>
-<perspectives activePart="com.genuitec.eclipse.webdesigner3.editors.jsp" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspectives activePart="org.eclipse.wst.server.ui.ServersView" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -551,9 +544,9 @@
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="Data Source Explorer"/>
 <page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="Snippets"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.wst.server.ui.ServersView" label="WTP Servers"/>
 <page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="Servers"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
@@ -583,174 +576,19 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/USSTOA/WebContent/filemanage.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/GetConnection.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/Test.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/USSTOA/WebContent/login.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/BaseDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/USSTOA/WebContent/css/style.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/USSTOA/WebContent/login.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/model/User.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/model/Organization.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/model/Department.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/model/File.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/model/Attendance.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/model/Message.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/model/Schedule.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/AdminDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/UserDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/OrganizationDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/DepartmentDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/FileDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/Attendance.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/Message.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/USSTOA/src/dao/Schedule.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/USSTOA/WebContent/login.jsp"/>
-</editors>
-<item historyLabel="GetConnection.java" index="1">
-<position info="not_deleted" x="327" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="303" y="0"/>
-</item>
-<item historyLabel="login.jsp" index="3"/>
-<item historyLabel="GetConnection.java" index="1">
-<position info="not_deleted" x="327" y="0"/>
-</item>
-<item historyLabel="login.jsp" index="3"/>
-<item historyLabel="GetConnection.java" index="1">
-<position info="not_deleted" x="327" y="0"/>
-</item>
-<item historyLabel="BaseDao.java" index="4">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="GetConnection.java" index="1">
-<position info="not_deleted" x="327" y="0"/>
-</item>
-<item historyLabel="style.css" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="filemanage.jsp" index="0"/>
-<item historyLabel="login.jsp" index="6"/>
-<item historyLabel="filemanage.jsp" index="0"/>
-<item historyLabel="style.css" index="5">
-<position/>
-</item>
-<item historyLabel="login.jsp" index="6"/>
-<item historyLabel="User.java" index="7">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="Organization.java" index="8">
-<position/>
-</item>
-<item historyLabel="User.java" index="7">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="Department.java" index="9">
-<position info="not_deleted" x="894" y="0"/>
-</item>
-<item historyLabel="Organization.java" index="8">
-<position info="not_deleted" x="31" y="12"/>
-</item>
-<item historyLabel="Department.java" index="9">
-<position info="not_deleted" x="269" y="0"/>
-</item>
-<item historyLabel="Organization.java" index="8">
-<position info="not_deleted" x="31" y="12"/>
-</item>
-<item historyLabel="Department.java" index="9">
-<position info="not_deleted" x="269" y="0"/>
-</item>
-<item historyLabel="User.java" index="7">
-<position info="not_deleted" x="1182" y="0"/>
-</item>
-<item historyLabel="Department.java" index="9">
-<position info="not_deleted" x="54" y="0"/>
-</item>
-<item historyLabel="User.java" index="7">
-<position info="not_deleted" x="40" y="7"/>
-</item>
-<item historyLabel="Department.java" index="9">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item historyLabel="Organization.java" index="8">
-<position info="not_deleted" x="86" y="0"/>
-</item>
-<item historyLabel="Department.java" index="9">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item historyLabel="Organization.java" index="8">
-<position info="not_deleted" x="86" y="0"/>
-</item>
-<item historyLabel="Department.java" index="9">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item historyLabel="User.java" index="7">
-<position info="not_deleted" x="321" y="0"/>
-</item>
-<item historyLabel="File.java" index="10">
-<position info="not_deleted" x="428" y="0"/>
-</item>
-<item historyLabel="Attendance.java" index="11">
-<position info="not_deleted" x="97" y="0"/>
-</item>
-<item historyLabel="Message.java" index="12">
-<position info="not_deleted" x="14" y="0"/>
-</item>
-<item historyLabel="Attendance.java" index="11">
-<position info="not_deleted" x="97" y="0"/>
-</item>
-<item historyLabel="Message.java" index="12">
-<position info="not_deleted" x="365" y="0"/>
-</item>
-<item historyLabel="Schedule.java" index="13">
-<position info="not_deleted" x="424" y="0"/>
-</item>
-<item historyLabel="AdminDao.java" index="14">
-<position info="not_deleted" x="55" y="0"/>
-</item>
-<item historyLabel="UserDao.java" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="AdminDao.java" index="14">
-<position info="not_deleted" x="12" y="0"/>
-</item>
-<item historyLabel="UserDao.java" index="15">
-<position info="not_deleted" x="52" y="0"/>
-</item>
-<item historyLabel="User.java" index="7">
-<position info="not_deleted" x="321" y="0"/>
-</item>
-<item historyLabel="OrganizationDao.java" index="16">
-<position info="not_deleted" x="60" y="0"/>
-</item>
-<item historyLabel="DepartmentDao.java" index="17">
-<position info="not_deleted" x="58" y="0"/>
-</item>
-<item historyLabel="FileDao.java" index="18">
-<position info="not_deleted" x="16" y="39"/>
-</item>
-<item historyLabel="Attendance.java" index="19">
-<position info="not_deleted" x="59" y="0"/>
-</item>
-<item historyLabel="Message.java" index="20">
-<position info="not_deleted" x="58" y="0"/>
-</item>
-<item historyLabel="Schedule.java" index="21">
-<position info="not_deleted" x="57" y="0"/>
-</item>
-<item historyLabel="OrganizationDao.java" index="16">
-<position info="not_deleted" x="60" y="0"/>
-</item>
-<item active="true" historyLabel="login.jsp" index="22"/>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topLeft"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="bottomRight"/>
+<trimItem IMemento.internal.id="topRight"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -762,6 +600,42 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="logout.java" tooltip="USSTOA/src/servlet/logout.java">
+<persistable path="/USSTOA/src/servlet/logout.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="pageCss.css" tooltip="USSTOA/WebContent/css/pageCss.css">
+<persistable path="/USSTOA/WebContent/css/pageCss.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="style.css" tooltip="USSTOA/WebContent/css/style.css">
+<persistable path="/USSTOA/WebContent/css/style.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="filemanage.jsp" tooltip="USSTOA/WebContent/filemanage.jsp">
+<persistable path="/USSTOA/WebContent/filemanage.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDao.java" tooltip="USSTOA/src/dao/UserDao.java">
+<persistable path="/USSTOA/src/dao/UserDao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="admin.jsp" tooltip="USSTOA/WebContent/admin.jsp">
+<persistable path="/USSTOA/WebContent/admin.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="user.jsp" tooltip="USSTOA/WebContent/user.jsp">
+<persistable path="/USSTOA/WebContent/user.jsp"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ID.class" tooltip="com.sun.xml.internal.bind.v2.model.core.ID">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=USSTOA/D:\/MyEclipse\/Common\/binary\/com.sun.java.jdk.win32.x86_64_1.6.0.013\/jre\/lib\/rt.jar&lt;com.sun.xml.internal.bind.v2.model.core(ID.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetConnection.java" tooltip="USSTOA/src/dao/GetConnection.java">
+<persistable path="/USSTOA/src/dao/GetConnection.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BaseDao.java" tooltip="USSTOA/src/dao/BaseDao.java">
+<persistable path="/USSTOA/src/dao/BaseDao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminDao.java" tooltip="USSTOA/src/dao/AdminDao.java">
+<persistable path="/USSTOA/src/dao/AdminDao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Login.java" tooltip="USSTOA/src/servlet/Login.java">
+<persistable path="/USSTOA/src/servlet/Login.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="login.jsp" tooltip="USSTOA/WebContent/login.jsp">
 <persistable path="/USSTOA/WebContent/login.jsp"/>
 </file>
@@ -770,42 +644,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Message.java" tooltip="USSTOA/src/dao/Message.java">
 <persistable path="/USSTOA/src/dao/Message.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Attendance.java" tooltip="USSTOA/src/dao/Attendance.java">
-<persistable path="/USSTOA/src/dao/Attendance.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileDao.java" tooltip="USSTOA/src/dao/FileDao.java">
-<persistable path="/USSTOA/src/dao/FileDao.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DepartmentDao.java" tooltip="USSTOA/src/dao/DepartmentDao.java">
-<persistable path="/USSTOA/src/dao/DepartmentDao.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganizationDao.java" tooltip="USSTOA/src/dao/OrganizationDao.java">
-<persistable path="/USSTOA/src/dao/OrganizationDao.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDao.java" tooltip="USSTOA/src/dao/UserDao.java">
-<persistable path="/USSTOA/src/dao/UserDao.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminDao.java" tooltip="USSTOA/src/dao/AdminDao.java">
-<persistable path="/USSTOA/src/dao/AdminDao.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Schedule.java" tooltip="USSTOA/src/model/Schedule.java">
-<persistable path="/USSTOA/src/model/Schedule.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Message.java" tooltip="USSTOA/src/model/Message.java">
-<persistable path="/USSTOA/src/model/Message.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Attendance.java" tooltip="USSTOA/src/model/Attendance.java">
-<persistable path="/USSTOA/src/model/Attendance.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="File.java" tooltip="USSTOA/src/model/File.java">
-<persistable path="/USSTOA/src/model/File.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Organization.java" tooltip="USSTOA/src/model/Organization.java">
-<persistable path="/USSTOA/src/model/Organization.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Department.java" tooltip="USSTOA/src/model/Department.java">
-<persistable path="/USSTOA/src/model/Department.java"/>
 </file>
 </mruList>
 </workbench>

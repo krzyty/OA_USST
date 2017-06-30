@@ -1,0 +1,32 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class BaseDao {
+	static DataSource dataSource;
+
+	public BaseDao() {
+		try {
+			Context context = new InitialContext();
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/ds");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public Connection getConnection()  {
+		Connection connection=null;
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		return connection;
+	}
+}

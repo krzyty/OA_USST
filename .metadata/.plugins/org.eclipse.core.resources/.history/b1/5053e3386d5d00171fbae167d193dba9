@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+#page {
+	height: 100%;
+	width: 100%;
+}
+
+#pageleft {
+	width: 18%;
+	float: left;
+	height: 100%;
+}
+
+#pageright {
+	height: 1000px;
+	width: 82%;
+	float: left;
+}

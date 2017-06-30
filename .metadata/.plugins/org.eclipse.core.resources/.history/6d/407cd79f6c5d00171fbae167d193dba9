@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+#page {
+	height: 100%;
+	width: 100%;
+}
+
+#pageleft {
+	width: 18%;
+	float: left;
+	height: 100%;
+}
+
+#pageright {
+	margin-left: 350px 3px 3px 3px;
+	height: 100%;
+}
