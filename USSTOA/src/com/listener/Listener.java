@@ -5,7 +5,7 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 import dao.UserDao;
-import model.User;
+//import servlet.User;
 
 /**
  * Application Lifecycle Listener implementation class MyListener

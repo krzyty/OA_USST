@@ -4,6 +4,7 @@ public class Organization {
 	private int OrganizationID;
 	private String OrganizationName;
 	private int OrganizationAdminID;
+	private String OrganizationMessage;
 
 	public Organization() {
 	}
@@ -25,6 +26,10 @@ public class Organization {
 	public void setOrganizationAdminID(int OrganizationAdminID) {
 		this.OrganizationAdminID = OrganizationAdminID;
 	}
+	
+	public void setOrganizationMessage(String OrganizationMessage) {
+		this.OrganizationMessage = OrganizationMessage;
+	}
 
 	public int getOrganizationID() {
 		return this.OrganizationID;
@@ -36,5 +41,9 @@ public class Organization {
 
 	public int getOrganizationAdminID() {
 		return this.OrganizationAdminID;
+	}
+	
+	public String getOrganizationMessage() {
+		return this.OrganizationMessage;
 	}
 }
