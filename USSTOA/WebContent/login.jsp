@@ -532,9 +532,9 @@ fieldset
 
     <fieldset id="inputs">
 
-        <input id="username" type="text" placeholder="用户名" autofocus required>   
+        <input id="username" name="id" type="text" placeholder="ID" autofocus required>   
 
-        <input id="password" type="password" placeholder="密码" required>
+        <input id="password" name="password" placeholder="PASSWORD" required>
 
     </fieldset>
 
@@ -542,7 +542,12 @@ fieldset
 
         <input type="submit" id="submit" value="Log in">
 
-        <a href="">忘记密码?</a>
+		<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="radio" name="role" value="user" checked="checked"  />用户
+		&nbsp&nbsp&nbsp	          
+	    <input type="radio" name="role" value="admin" />管理员
+
+        <a href="">忘记密码?</a></p>
     </fieldset>
 
     <a href="~/userMain.jsp" id="back">©2017上海理工大学办公自动化系统.All rights reserved.</a>
