@@ -8,19 +8,29 @@ public class File {
 	private String fileType;
 	private Date fileDate;
 	private float fileSize;
+	private String fileAddress;
 	private User user;
 
 	public File() {
 	}
 
 	public File(int fileID, String fileName, String fileType, Date fileDate,
-			float fileSize, User user) {
+			float fileSize, String fileAddress, User user) {
 		this.fileID = fileID;
 		this.fileName = fileName;
 		this.fileType = fileType;
 		this.fileDate = fileDate;
 		this.fileSize = fileSize;
+		this.fileAddress = fileAddress;
 		this.user = user;
+	}
+
+	public String getFileAddress() {
+		return fileAddress;
+	}
+
+	public void setFileAddress(String fileAddress) {
+		this.fileAddress = fileAddress;
 	}
 
 	public int getFileID() {
