@@ -16,7 +16,7 @@
 			<th>编号</th>
 			<th>管理员</th>
 		</tr>
-		<c:forEach var="Organization" items="${ myTag:getOrganization()}">
+		<%-- <c:forEach var="Organization" items="${ myTag:getOrganization()}">
 			<tr>
 				<td>${ Organization.OrganizationName }</td>
 				<td>${ Organization.OrganizationMessage }</td>
@@ -25,7 +25,7 @@
 				<td><input type="radio" name="choose"
 					value="${ Organization.Name }" /></td>
 			</tr>
-		</c:forEach>
+		</c:forEach> --%>
 	</table>
 </body>
 </html>

@@ -16,7 +16,7 @@
 			<th>员工号</th>
 			<th>密码</th>
 		</tr>
-		<c:forEach var="User" items="${ myTag:getUser()}">
+		<%-- <c:forEach var="User" items="${ myTag:getUser()}">
 			<tr>
 				<td>${ User.UserName }</td>
 				<td>${ User.User }</td>
@@ -25,7 +25,7 @@
 				<td><input type="radio" name="choose"
 					value="${ User.Name }" /></td>
 			</tr>
-		</c:forEach>
+		</c:forEach> --%>
 	</table>
 </body>
 </html>

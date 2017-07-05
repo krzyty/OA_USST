@@ -534,7 +534,7 @@ fieldset
 
         <input id="username" name="id" type="text" placeholder="ID" autofocus required>   
 
-        <input id="password" name="password" placeholder="PASSWORD" required>
+        <input id="password" name="password"  type="password" placeholder="PASSWORD" required>
 
     </fieldset>
 
