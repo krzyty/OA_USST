@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
 				synchronized (session) {
 					session.setAttribute("ID", ID);
 				}
-				response.sendRedirect("/USSTOA/userMain.jsp");
+				response.sendRedirect("userMain.jsp");
 			}else{
 				message="请输入正确的身份信息！";
 				request.setAttribute("message", message);

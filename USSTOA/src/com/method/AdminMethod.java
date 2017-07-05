@@ -13,7 +13,7 @@ public class AdminMethod {
 	}
 
 	private AdminDao AdminDao = new AdminDao();
-	public boolean addUser(User user) {
+	/*public boolean addUser(User user) {
 		boolean bool = false;
 		if (AdminDao.addUser(user)) {
 			bool = true;
@@ -21,5 +21,5 @@ public class AdminMethod {
 		AdminDao.closeConnection();
 		AdminDao = null;
 		return bool;
-	}
+	}*/
 }

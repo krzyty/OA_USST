@@ -43,10 +43,10 @@
                     <a href="http://www.raychien.site">日程</a>
                 </li>
                 <li>
-                    <a href="#">文件</a>
+                    <a href="filemanage.jsp">文件</a>
                 </li>
                 <li>
-                    <a href="#">消息</a>
+                    <a href="message.jsp">消息</a>
                 </li>
                 <li>
                     <a href="#">考勤</a>
