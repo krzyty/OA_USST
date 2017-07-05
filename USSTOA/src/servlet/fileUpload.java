@@ -18,7 +18,7 @@ import model.User;
 import dao.FileDao;
 
 @WebServlet("/fileUpload")
-@MultipartConfig(location = "D:\\", fileSizeThreshold = 4096)
+@MultipartConfig(fileSizeThreshold = 4096)
 public class fileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -58,7 +58,7 @@ public class fileUpload extends HttpServlet {
 					.substring(h.lastIndexOf(";") + 12, h.length() - 1);
 
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-			String fname = sdf.format(fileDate).toString()
+			String fname = sdf.format(fileDate).toString() + "_"
 					+ request.getSession().getAttribute("ID") + string;
 			p.write(path + "\\" + fname);
 			String fileAddress = "\\USSTOA\\" + "\\file\\" + fname;
@@ -79,8 +79,12 @@ public class fileUpload extends HttpServlet {
 
 			if (new FileDao().addFile(file) > 0) {
 				JOptionPane.showMessageDialog(null, "文件上传成功！");
+				request.getRequestDispatcher("/filemanage.jsp").forward(request,
+						response);
 			} else {
 				JOptionPane.showMessageDialog(null, "文件上传失败！");
+				request.getRequestDispatcher("/filemanage.jsp").forward(request,
+						response);
 			}
 
 		}

@@ -37,6 +37,7 @@ CREATE TABLE files
 	fileType VARCHAR(20),
 	fileDate DATETIME,
 	fileSize FLOAT(15),
+	fileAddress VARCHAR(300),
 	uploadPerson INT(11),
 	FOREIGN KEY(uploadPerson) REFERENCES users(userID),
 	fileState INT(2) #1有效 2已删除

@@ -10,6 +10,7 @@
 <title>搜索结果</title>
 </head>
 <body>
+ <h3>搜索结果</h3>
 <table border="1" cellspacing="0" width="50%">
 				<tr align="center">
 					<th>文件名</th>

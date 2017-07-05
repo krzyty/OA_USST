@@ -6,7 +6,7 @@
 		driverClassName="com.mysql.jdbc.Driver" 
 		url="jdbc:mysql://localhost/usstoa"
 		username="root" 
-		password="Kisser6626" 
+		password="root" 
 		maxActive="100" 
 		maxIdle="30" 
 		maxWait="10000" />

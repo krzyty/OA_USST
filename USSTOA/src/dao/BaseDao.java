@@ -17,8 +17,8 @@ public class BaseDao {
 			e.printStackTrace();
 		}
 	}
-	
-	public Connection getConnection() throws Exception{
+
+	public Connection getConnection() throws Exception {
 		return dataSource.getConnection();
 	}
 

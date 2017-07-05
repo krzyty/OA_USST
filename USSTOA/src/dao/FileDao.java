@@ -157,7 +157,7 @@ public class FileDao extends BaseDao {
 
 		return ec;
 	}
-	
+
 	public int fileRecovery(int fileID) {
 		String sql = "UPDATE files SET fileState=1  WHERE fileID=?";
 		int ec = 0;
@@ -173,7 +173,7 @@ public class FileDao extends BaseDao {
 
 		return ec;
 	}
-	
+
 	public int fileThoroughDelete(int fileID) {
 		String sql = "UPDATE files SET fileState=0  WHERE fileID=?";
 		int ec = 0;
@@ -189,15 +189,16 @@ public class FileDao extends BaseDao {
 
 		return ec;
 	}
-	
-	public List<File> searchFiles(int userID,String filename) {
-		String sql = "SELECT * FROM files WHERE uploadPerson=? AND fileState=1 AND fileName LIKE '%"+filename+"%' ORDER BY fileType ASC,fileDate DESC";
+
+	public List<File> searchFiles(int userID, String filename) {
+		String sql = "SELECT * FROM files WHERE uploadPerson=? AND fileState=1 AND fileName LIKE '%"
+				+ filename + "%' ORDER BY fileType ASC,fileDate DESC";
 		List<File> files = new ArrayList<File>();
 		try {
 			Connection connection = dataSource.getConnection();
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 			pstmt.setInt(1, userID);
-			//pstmt.setString(2, filename);
+			// pstmt.setString(2, filename);
 			ResultSet rst = pstmt.executeQuery();
 
 			while (rst.next()) {

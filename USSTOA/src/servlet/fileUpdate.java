@@ -36,8 +36,12 @@ public class fileUpdate extends HttpServlet {
 
 		if (new FileDao().updateFile(fileID, fileName, fileType) > 0) {
 			JOptionPane.showMessageDialog(null, "修改成功！");
+			request.getRequestDispatcher("/filemanage.jsp").forward(request,
+					response);
 		} else {
 			JOptionPane.showMessageDialog(null, "修改失败！");
+			request.getRequestDispatcher("/filemanage.jsp").forward(request,
+					response);
 		}
 
 	}

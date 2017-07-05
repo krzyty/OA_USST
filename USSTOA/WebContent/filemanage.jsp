@@ -19,33 +19,58 @@
 		$("#tabs").tabs();
 	});
 </script>
+<script>
+	function showSearchResult() {
+	
+		var str=document.getElementById("searchtext").value;
+	
+		var xmlhttp;
+		if (str == "") {
+			document.getElementById("txtHint").innerHTML = "";
+			return;
+		}
+		
+		if (window.XMLHttpRequest) {
+			// IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// IE6, IE5 浏览器执行代码
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+			}
+		}
+		
+		xmlhttp.open("POST", "fileSearch?fileName="+str, true);
+		xmlhttp.send();
+	}
+</script>
 </head>
 <body>
 	<div id="tabs">
 		<ul>
-			<li><a href="#fragment-1"><span>文档上传</span> </a>
-			</li>
-			<li><a href="#fragment-2"><span>文档查看</span> </a>
-			</li>
-			<li><a href="#fragment-3"><span>文档搜索</span> </a>
-			</li>
-			<li><a href="#fragment-4"><span>回收站</span> </a>
-			</li>
+			<li><a href="#fragment-1"><span>文档上传</span> </a></li>
+			<li><a href="#fragment-2"><span>文档查看</span> </a></li>
+			<li><a href="#fragment-3"><span>文档搜索</span> </a></li>
+			<li><a href="#fragment-4"><span>回收站</span> </a></li>
 		</ul>
 		<div id="fragment-1">
 			<form action="fileUpload" method="post" enctype="multipart/form-data">
-				文档名：<input type="text" name="fileName" required><br /> 
-				类 型：<select name="fileType" required>
-					  	<option value="文本">文本</option>
-						<option value="图片">图片</option>
-					  </select> <br /> 
-				选 择：<input type="file" name="fileSrc" required><br />
+				文档名：<input type="text" name="fileName" required><br /> 类 型：<select
+					name="fileType" required>
+					<option value="文本">文本</option>
+					<option value="图片">图片</option>
+					<option value="其他">其他</option>
+				</select> <br /> 选 择：<input type="file" name="fileSrc" required><br />
 				<input type="submit" value="提交"> <input type="reset"><br />
 			</form>
 		</div>
 		<div id="fragment-2">
 			<table border="1" cellspacing="0" width="50%">
-				<tr align="center">
+				<tr align="left">
 					<th>文件名</th>
 					<th>文件类型</th>
 					<th>上传时间</th>
@@ -53,29 +78,30 @@
 					<th>下载</th>
 					<th>操作</th>
 				</tr>
-	
-				<c:forEach var="file" items='<%= new FileDao().getAllFiles(((Integer)session.getAttribute("ID")).intValue()) %>'>
-					<tr align="center">
+
+				<c:forEach var="file"
+					items='<%= new FileDao().getAllFiles(((Integer)session.getAttribute("ID")).intValue()) %>'>
+					<tr align="left">
 						<td>${file.fileName }</td>
 						<td>${file.fileType }</td>
 						<td>${file.fileDate }</td>
 						<td>${file.fileSize }</td>
-						<td><a href="${file.fileAddress }">下载地址</a></td>
-						<td><a href="fileUpdate.jsp?fileID=${file.fileID }">修改</a>&nbsp;&nbsp;<a href="fileDelete?fileID=${file.fileID }">删除</a></td>
+						<td><a href="${file.fileAddress }">下载地址</a>
+						</td>
+						<td><a href="fileUpdate.jsp?fileID=${file.fileID }">修改</a>&nbsp;&nbsp;<a
+							href="fileDelete?fileID=${file.fileID }">删除</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</table>
 		</div>
 		<div id="fragment-3">
-			<form action="fileSearch" method="post">
-				<input type="text" name="fileName" required>
-				<input type="submit" value="搜索"><br/>
-			</form>
-			
-			</div>
-			<div id="fragment-4">
+			<input type="text" name="fileName" required id="searchtext"> <input
+				type="submit" value="搜索" onclick="showSearchResult()" ><br />
+			<div id="txtHint"></div>
+		</div>
+		<div id="fragment-4">
 			<table border="1" cellspacing="0" width="50%">
-				<table border="1" cellspacing="0" width="50%">
 				<tr align="center">
 					<th>文件名</th>
 					<th>文件类型</th>
@@ -83,18 +109,21 @@
 					<th>文件大小</th>
 					<th>操作</th>
 				</tr>
-	
-				<c:forEach var="file" items='<%= new FileDao().getFilesFromGarbage(((Integer)session.getAttribute("ID")).intValue()) %>'>
+
+				<c:forEach var="file"
+					items='<%= new FileDao().getFilesFromGarbage(((Integer)session.getAttribute("ID")).intValue()) %>'>
 					<tr align="center">
 						<td>${file.fileName }</td>
 						<td>${file.fileType }</td>
 						<td>${file.fileDate }</td>
 						<td>${file.fileSize }</td>
-						<td><a href="fileRecovery?fileID=${file.fileID }">回收</a>&nbsp;&nbsp;<a href="fileThoroughDelete?fileID=${file.fileID }">彻底删除</a></td>
+						<td><a href="fileRecovery?fileID=${file.fileID }">回收</a>&nbsp;&nbsp;<a
+							href="fileThoroughDelete?fileID=${file.fileID }">彻底删除</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</table>
-			</div>
+		</div>
 	</div>
 
 </body>

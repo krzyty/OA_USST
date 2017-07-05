@@ -32,8 +32,12 @@ public class fileThoroughDelete extends HttpServlet {
 		int fileID = Integer.parseInt(fileid);
 		if (new FileDao().fileThoroughDelete(fileID) > 0) {
 			JOptionPane.showMessageDialog(null, "已彻底删除！");
+			request.getRequestDispatcher("/filemanage.jsp").forward(request,
+					response);
 		} else {
 			JOptionPane.showMessageDialog(null, "修改失败！");
+			request.getRequestDispatcher("/filemanage.jsp").forward(request,
+					response);
 		}
 	}
 

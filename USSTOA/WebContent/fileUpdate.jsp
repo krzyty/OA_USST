@@ -1,4 +1,4 @@
-<%@page import="dao.FileDao,model.File"%>
+<%@page import="dao.FileDao,model.File,java.lang.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,10 +12,10 @@
 	File file=new FileDao().getFilesByFileID(((Integer)session.getAttribute("ID")).intValue(), Integer.parseInt(request.getParameter("fileID")));
 	request.setAttribute("file", file);
  %>
- <br/>
  <div align="left">
- 	<form action="fileUpdate?fileID=<%=request.getParameter("fileID")%>" method="post">
-		<table border="0" cellspacing="0" align="center">
+ <h3>修改文件信息</h3>
+ 	<form action='fileUpdate?fileID=<%= Integer.parseInt(request.getParameter("fileID"))%>' method="post">
+ 	<table border="0" cellspacing="0" align="left">
 		<tr>
 			<td>文  件  名：</td>
 			<td><input type="text" name="fileName" value="${file.fileName }" required></td>
@@ -25,6 +25,7 @@
 			<td><select name="fileType" required>
 					  	<option value="文本">文本</option>
 						<option value="图片">图片</option>
+						<option value="其他">其他</option>
 				</select> 
 			</td>
 		</tr>
@@ -40,7 +41,6 @@
 			<td><input type="submit" value="提交"></td>
 			<td><input type="reset"></td>	
 		</tr>
-		 <
 	</table>
 	</form>
 	

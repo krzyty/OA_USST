@@ -33,8 +33,12 @@ public class fileRecovery extends HttpServlet {
 
 		if (new FileDao().fileRecovery(fileID) > 0) {
 			JOptionPane.showMessageDialog(null, "回收成功！");
+			request.getRequestDispatcher("/filemanage.jsp").forward(request,
+					response);
 		} else {
 			JOptionPane.showMessageDialog(null, "回收失败！");
+			request.getRequestDispatcher("/filemanage.jsp").forward(request,
+					response);
 		}
 	}
 
