@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+tomcat7Server.bookstore.IEARProjectName=
+tomcat7Server.bookstore.altContextRoot=/bookstore
+tomcat7Server.bookstore.contextRoot=/bookstore
+tomcat7Server.bookstore.deployIsOverProject=false
+tomcat7Server.bookstore.deploymentPath=E\:\\tomcat7\\webapps\\bookstore
+tomcat7Server.bookstore.isDeployed=true
+tomcat7Server.bookstore.isExploded=true
+tomcat7Server.bookstore.isUptoDate=true
+tomcat7Server.bookstore.noFileCopy=false
+tomcat7Server.bookstore.shouldBackup=false
+tomcat7Server.bookstore.shouldOverwrite=false
+tomcat7Server.bookstore.type=WebDeployment

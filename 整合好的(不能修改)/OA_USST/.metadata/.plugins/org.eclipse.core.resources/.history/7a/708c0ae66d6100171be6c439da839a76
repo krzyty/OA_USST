@@ -1,0 +1,228 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import model.File;
+
+public class FileDao extends BaseDao {
+	public List<File> getAllFiles(int userID) {
+		String sql = "SELECT * FROM files WHERE uploadPerson=? AND fileState=1 ORDER BY fileType ASC,fileDate DESC";
+		List<File> files = new ArrayList<File>();
+		try {
+			Connection connection = dataSource.getConnection();
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+			pstmt.setInt(1, userID);
+			ResultSet rst = pstmt.executeQuery();
+
+			while (rst.next()) {
+				int fileID = rst.getInt("fileID");
+				String fileName = rst.getString("fileName");
+				String fileType = rst.getString("fileType");
+				Date fileDate = rst.getDate("fileDate");
+				float fileSize = rst.getFloat("fileSize");
+				String fileAddress = rst.getString("fileAddress");
+				File file = new File();
+				file.setFileID(fileID);
+				file.setFileName(fileName);
+				file.setFileType(fileType);
+				file.setFileDate(fileDate);
+				file.setFileSize(fileSize);
+				file.setFileAddress(fileAddress);
+				files.add(file);
+				
+				connection.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return files;
+	}
+
+	public int addFile(File file) {
+		String sql = "INSERT INTO files(fileName,fileType,fileDate,fileSize,fileAddress,uploadPerson,fileState) VALUES(?,?,?,?,?,?,1)";
+
+		int ec = 0;
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, file.getFileName());
+			pstmt.setString(2, file.getFileType());
+			pstmt.setDate(3, new java.sql.Date(file.getFileDate().getTime()));
+			pstmt.setFloat(4, file.getFileSize());
+			pstmt.setString(5, file.getFileAddress());
+			pstmt.setInt(6, file.getUser().getUserID());
+
+			ec = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return ec;
+	}
+
+	public List<File> getFilesFromGarbage(int userID) {
+		String sql = "SELECT * FROM files WHERE uploadPerson=? AND fileState=2 ORDER BY fileType ASC,fileDate DESC";
+		List<File> files = new ArrayList<File>();
+		try {
+			Connection connection = dataSource.getConnection();
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+			pstmt.setInt(1, userID);
+			ResultSet rst = pstmt.executeQuery();
+
+			while (rst.next()) {
+				int fileID = rst.getInt("fileID");
+				String fileName = rst.getString("fileName");
+				String fileType = rst.getString("fileType");
+				Date fileDate = rst.getDate("fileDate");
+				float fileSize = rst.getFloat("fileSize");
+				String fileAddress = rst.getString("fileAddress");
+				File file = new File();
+				file.setFileID(fileID);
+				file.setFileName(fileName);
+				file.setFileType(fileType);
+				file.setFileDate(fileDate);
+				file.setFileSize(fileSize);
+				file.setFileAddress(fileAddress);
+				files.add(file);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return files;
+	}
+
+	public File getFilesByFileID(int userID, int fileID) {
+		String sql = "SELECT * FROM files WHERE uploadPerson=? AND fileID=? ORDER BY fileType ASC,fileDate DESC";
+		File file = new File();
+		try {
+			Connection connection = dataSource.getConnection();
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+			pstmt.setInt(1, userID);
+			pstmt.setInt(2, fileID);
+			ResultSet rst = pstmt.executeQuery();
+
+			while (rst.next()) {
+				String fileName = rst.getString("fileName");
+				String fileType = rst.getString("fileType");
+				Date fileDate = rst.getDate("fileDate");
+				float fileSize = rst.getFloat("fileSize");
+				file.setFileName(fileName);
+				file.setFileType(fileType);
+				file.setFileDate(fileDate);
+				file.setFileSize(fileSize);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return file;
+	}
+
+	public int updateFile(int fileID, String fileName, String fileType) {
+		String sql = "UPDATE files SET fileName=?,fileType=? WHERE fileID=?";
+		int ec = 0;
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, fileName);
+			pstmt.setString(2, fileType);
+			pstmt.setInt(3, fileID);
+
+			ec = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return ec;
+	}
+
+	public int deleteFile(int fileID) {
+		String sql = "UPDATE files SET fileState=2  WHERE fileID=?";
+		int ec = 0;
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, fileID);
+
+			ec = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return ec;
+	}
+
+	public int fileRecovery(int fileID) {
+		String sql = "UPDATE files SET fileState=1  WHERE fileID=?";
+		int ec = 0;
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, fileID);
+
+			ec = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return ec;
+	}
+
+	public int fileThoroughDelete(int fileID) {
+		String sql = "UPDATE files SET fileState=0  WHERE fileID=?";
+		int ec = 0;
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, fileID);
+
+			ec = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return ec;
+	}
+
+	public List<File> searchFiles(int userID, String filename) {
+		String sql = "SELECT * FROM files WHERE uploadPerson=? AND fileState=1 AND fileName LIKE '%"
+				+ filename + "%' ORDER BY fileType ASC,fileDate DESC";
+		List<File> files = new ArrayList<File>();
+		try {
+			Connection connection = dataSource.getConnection();
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+			pstmt.setInt(1, userID);
+			// pstmt.setString(2, filename);
+			ResultSet rst = pstmt.executeQuery();
+
+			while (rst.next()) {
+				int fileID = rst.getInt("fileID");
+				String fileName = rst.getString("fileName");
+				String fileType = rst.getString("fileType");
+				Date fileDate = rst.getDate("fileDate");
+				float fileSize = rst.getFloat("fileSize");
+				String fileAddress = rst.getString("fileAddress");
+				File file = new File();
+				file.setFileID(fileID);
+				file.setFileName(fileName);
+				file.setFileType(fileType);
+				file.setFileDate(fileDate);
+				file.setFileSize(fileSize);
+				file.setFileAddress(fileAddress);
+				files.add(file);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return files;
+	}
+}

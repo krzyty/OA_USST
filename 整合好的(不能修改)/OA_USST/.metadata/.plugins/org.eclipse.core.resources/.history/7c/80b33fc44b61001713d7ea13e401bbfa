@@ -1,0 +1,59 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import model.File;
+import dao.FileDao;
+
+@WebServlet("/fileSearch")
+public class fileSearch extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public fileSearch() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		String fileName = request.getParameter("fileName");
+		int ID = ((Integer) request.getSession().getAttribute("ID")).intValue();
+
+		List<File> searchFilesList = new FileDao().searchFiles(ID, fileName);
+		out.println(fileName);
+		/*out.println("<html><head>");
+		out.println("<body>");
+		out.println("<table border=1 cellspacing=0>");
+		out.println("<tr align='left'><th>文件名</th><th>文件类型</th><th>上传时间</th><th>文件大小</th><th>下载</th><th>操作</th></tr>");
+
+		for (File file : searchFilesList) {
+			out.println("<tr ><td>" + file.getFileName() + "</td><td>"
+					+ file.getFileType() + "</td><td>" + file.getFileDate()
+					+ "</td><td>" + file.getFileSize() + "</td><td>"
+					+ "<a href='" + file.getFileAddress() + "'>下载地址</a>"
+					+ "</td><td>" + "<a href='" + file.getFileID()
+					+ "'>修改</a>&nbsp;&nbsp;<a href='" + file.getFileID()
+					+ "'>删除</a>" + "</td><tr>");
+		}
+
+		out.println("</table></body></head></html>");*/
+
+		 request.setAttribute("searchFilesList", searchFilesList);
+		 request.getRequestDispatcher("fileSearch.jsp").forward(request,
+		 response);
+	}
+}

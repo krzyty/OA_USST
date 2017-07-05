@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=WebContent/js/fullcalendar.min.js,WebContent/js/jquery.js
+validator.Unchecked=
