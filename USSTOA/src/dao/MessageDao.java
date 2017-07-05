@@ -24,7 +24,6 @@ public class MessageDao extends BaseDao{
 				int messageID = rst.getInt("messageID");
 				String messageText = rst.getString("messgeText");
 				int sendUser=rst.getInt("sendUser");
-				int receiveUser=rst.getInt("receiveUser");
 				Date sendTime=rst.getDate("sendTime");
 				Message message = new Message();
 				message.setMessageID(messageID);
