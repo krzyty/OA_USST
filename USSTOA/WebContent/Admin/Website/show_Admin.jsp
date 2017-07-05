@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/style.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>查看员工信息</title>
+<title>网站管理</title>
 </head>
 <body>
 <table id="classChoose" class="table table-bordered">
@@ -16,16 +16,16 @@
 			<th>员工号</th>
 			<th>密码</th>
 		</tr>
-		<%-- <c:forEach var="User" items="${ myTag:getUser()}">
+		<c:forEach var="Admin" items="${ myTag:getAdmin()}">
 			<tr>
-				<td>${ User.UserName }</td>
-				<td>${ User.UserOrganization }</td>
-				<td>${ User.UserID }</td>
-				<td>${ User.UserPassword }</td>
+				<td>${ Admin.AdminName }</td>
+				<td>${ Admin.AdminPower }</td>
+				<td>${ Admin.AdminID }</td>
+				<td>${ Admin.AdminPassword }</td>
 				<td><input type="radio" name="choose"
-					value="${ User.Name }" /></td>
+					value="${ Admin.Name }" /></td>
 			</tr>
-		</c:forEach> --%>
+		</c:forEach>
 	</table>
 </body>
 </html>
