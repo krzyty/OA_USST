@@ -14,25 +14,9 @@
 <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
 <link rel="stylesheet" href="/css/style.css">
-<script>
-	$(function() {
-		$("#tabs").tabs();
-	});
-</script>
 </head>
 <body>
-<div id="tabs">
-		<ul>
-			<li><a href="#fragment-1"><span>文档上传</span> </a>
-			</li>
-			<li><a href="#fragment-2"><span>文档查看</span> </a>
-			</li>
-			<li><a href="#fragment-3"><span>文档搜索</span> </a>
-			</li>
-			<li><a href="#fragment-4"><span>回收站</span> </a>
-			</li>
-		</ul>
-		<div id="fragment-1">
+		<div>
 			<table border="1" cellspacing="0" width="50%">
 				<tr align="center">
 					<th>发送者</th>
@@ -50,7 +34,6 @@
 					</tr>
 				</c:forEach>
 			</table>
-		</div>
 		</div>
 </body>
 </html>
